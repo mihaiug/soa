@@ -1,0 +1,115 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ro.ucv.inf.soa.ws.phonebook</groupId>
+	<artifactId>jax-ws-phonebook-client</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>PhoneBook SOAP JAX-WS Service Client</name>
+	<description>Client for PhoneBook SOAP JAX-WS Service</description>
+	<properties>
+		<!-- Generic properties -->
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- The main class -->
+		<main.exec.classname>ro.ucv.inf.soa.ws.phonebook.PhoneBookClient</main.exec.classname>
+		
+		<!-- Java API for XML Web Services (JAX-WS) -->
+		<jaxws.version>2.3.0</jaxws.version>
+		
+		<!-- WSDL URL -->	
+		<wsdl.url>http://localhost:8080/jax-ws-phonebook/contacts?wsdl</wsdl.url>
+		
+		<!-- Offline WSDL file location -->
+		<wsdl.directory>${basedir}/src/main/resources/wsdl</wsdl.directory>
+		<wsdl.file>contacts.wsdl</wsdl.file>
+		
+		<!-- Plug-in versions -->
+		<jaxws-maven-plugin.version>2.5</jaxws-maven-plugin.version>
+		<build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
+		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+		<exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>	
+			
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		 
+		 <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+            <version>${jaxws.version}</version>
+            <scope>provided</scope>
+        </dependency>
+         
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- Set JDK Compiler Level -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+
+			<!-- Plug-in used to run main class from command line using 'mvn exec:java'  -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>${exec-maven-plugin.version}</version>
+				<configuration>
+					<mainClass>${main.exec.classname}</mainClass>
+				</configuration>
+			</plugin>
+			
+			<!-- Parses WSDL and binding files and generates Java code needed to access	it -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+				<version>${jaxws-maven-plugin.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>wsimport</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<!-- The name of your generated source package -->
+					<packageName>ro.ucv.inf.soa.ws.phonebook.service</packageName>					
+					<wsdlUrls>
+						<wsdlUrl>${wsdl.url}</wsdlUrl>
+					</wsdlUrls>
+					 <!-- or using wsdls file directory -->
+					 <!-- 
+						<wsdlDirectory>${wsdl.directory}</wsdlDirectory> 
+						<wsdlFiles>
+						 	<wsdlFile>${wsdl.file}</wsdlFile>
+						</wsdlFiles> 
+ 					 -->
+					 <!-- Keep generated files -->
+					<keep>true</keep>
+					<sourceDestDir>src/main/java</sourceDestDir>
+				</configuration>
+
+				<!-- if you want to use a specific version of JAX-WS, you can do so like this -->
+				<dependencies>
+					<dependency>
+						<groupId>com.sun.xml.ws</groupId>
+						<artifactId>jaxws-tools</artifactId>
+						<version>${jaxws.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,178 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Phonebook",
+		"_postman_id": "f00bdf74-e84e-12b9-b57a-81892cd55a7a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "JSON - Add a contact",
+			"request": {
+				"url": "http://localhost:8080/rest-phonebook/api/contacts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\" : \"Mihai\",\n\"phone\" : \"072000000\"\n}"
+				},
+				"description": "Add a contact using a JSON"
+			},
+			"response": []
+		},
+		{
+			"name": "JSON - Get a contact",
+			"request": {
+				"url": "http://localhost:8080/rest-phonebook/api/contacts/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Get contact with specified id as JSON"
+			},
+			"response": []
+		},
+		{
+			"name": "JSON - Get all contacts",
+			"request": {
+				"url": "http://localhost:8080/rest-phonebook/api/contacts",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Get all contacts"
+			},
+			"response": []
+		},
+		{
+			"name": "JSON - Update  a contact",
+			"request": {
+				"url": "http://localhost:8080/rest-phonebook/api/contacts/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Mihai Gabroveanu\",\n    \"phone\": \"07200000\"\n}"
+				},
+				"description": "Update a contact"
+			},
+			"response": []
+		},
+		{
+			"name": "XML - Get all contacts",
+			"request": {
+				"url": "http://localhost:8080/rest-phonebook/api/contacts",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Get all contacts"
+			},
+			"response": []
+		},
+		{
+			"name": "XML - Add a contact",
+			"request": {
+				"url": "http://localhost:8080/rest-phonebook/api/contacts/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<contact>\n    <name>Mihai</name>\n    <phone>07200000</phone>\n</contact>"
+				},
+				"description": "Add a contact"
+			},
+			"response": []
+		},
+		{
+			"name": "XML - Update a contact",
+			"request": {
+				"url": "http://localhost:8080/rest-phonebook/api/contacts/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<contact>\n    <id>1</id>\n    <name>Mihai</name>\n    <phone>07200000</phone>\n</contact>"
+				},
+				"description": "Update a contact"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a contact",
+			"request": {
+				"url": "http://localhost:8080/rest-phonebook/api/contacts/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Delete a contact with specified id."
+			},
+			"response": []
+		}
+	]
+}

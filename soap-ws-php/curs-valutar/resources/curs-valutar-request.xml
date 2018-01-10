@@ -1,0 +1,9 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:ns0="http://www.infovalutar.ro/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <ns0:GetLatestValue>
+            <ns0:Moneda>EUR</ns0:Moneda>
+        </ns0:GetLatestValue>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

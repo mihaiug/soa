@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="67f5a3b5-e1a6-42f5-88b8-8c220955cec1" activeEnvironment="Default" name="InfoValutar" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="f5207706-08f5-4590-aa95-885b231260b9" wsaVersion="NONE" name="CursSoap12" type="wsdl" bindingName="{http://www.infovalutar.ro/}CursSoap12" soapVersion="1_2" anonymous="optional" definition="http://www.infovalutar.ro/curs.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint></con:endpoints><con:operation id="a389bc8a-d2ad-4c8b-9aff-b4716ea65abb" isOneWay="false" action="http://www.infovalutar.ro/getall" name="getall" bindingOperationName="getall" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8d2a5d60-4f85-4ea9-aa26-f6ec4ef2419a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <inf:getall>\r
+         <inf:dt>?</inf:dt>\r
+      </inf:getall>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/CursSoap/getallRequest"/></con:call></con:operation><con:operation id="d54e7796-91ad-4bc4-a098-6c3b8ee96da4" isOneWay="false" action="http://www.infovalutar.ro/getlatestvalue" name="getlatestvalue" bindingOperationName="getlatestvalue" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="252e22cd-9862-4429-947b-8ff4d4d0cfa0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <inf:getlatestvalue>\r
+         <!--Optional:-->\r
+         <inf:Moneda>?</inf:Moneda>\r
+      </inf:getlatestvalue>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/CursSoap/getlatestvalueRequest"/></con:call></con:operation><con:operation id="433c82f8-075e-4491-9102-f72feeb49710" isOneWay="false" action="http://www.infovalutar.ro/GetLatestValue" name="GetLatestValue" bindingOperationName="GetLatestValue" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f8ef800a-f8c1-4b4b-9b90-25f714124965" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+   xmlns:inf="http://www.infovalutar.ro/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <inf:GetLatestValue>\r
+         <inf:Moneda>EUR</inf:Moneda>\r
+      </inf:GetLatestValue>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/CursSoap/GetLatestValueRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="40365ff7-522b-4c89-ad04-56addf7d2cfd" isOneWay="false" action="http://www.infovalutar.ro/getvalue" name="getvalue" bindingOperationName="getvalue" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="88791d68-e622-4a04-92e1-767d6795c918" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <inf:getvalue>\r
+         <inf:TheDate>?</inf:TheDate>\r
+         <!--Optional:-->\r
+         <inf:Moneda>?</inf:Moneda>\r
+      </inf:getvalue>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/CursSoap/getvalueRequest"/></con:call></con:operation><con:operation id="0aa47877-de83-4aaf-b86c-a01c3423d429" isOneWay="false" action="http://www.infovalutar.ro/GetValue" name="GetValue" bindingOperationName="GetValue" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e4cbcc21-7a62-4f9f-a442-061ad2745e1e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <inf:GetValue>\r
+         <inf:TheDate>?</inf:TheDate>\r
+         <!--Optional:-->\r
+         <inf:Moneda>?</inf:Moneda>\r
+      </inf:GetValue>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/CursSoap/GetValueRequest"/></con:call></con:operation><con:operation id="72ba86a4-c20b-4447-bdbb-10f0e59fd805" isOneWay="false" action="http://www.infovalutar.ro/getvalueadv" name="getvalueadv" bindingOperationName="getvalueadv" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3ff72d25-c933-4db4-b2e2-634f1dcd3dac" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <inf:getvalueadv>\r
+         <inf:thedate>?</inf:thedate>\r
+         <!--Optional:-->\r
+         <inf:themoneda>?</inf:themoneda>\r
+      </inf:getvalueadv>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/CursSoap/getvalueadvRequest"/></con:call></con:operation><con:operation id="19ea3177-21c6-409b-adcb-6c653d563884" isOneWay="false" action="http://www.infovalutar.ro/lastdateinserted" name="lastdateinserted" bindingOperationName="lastdateinserted" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="70a3cae8-9fe4-4b61-a001-8385471a1751" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <inf:lastdateinserted/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/CursSoap/lastdateinsertedRequest"/></con:call></con:operation><con:operation id="1609e49c-2708-4314-9960-c086278f8733" isOneWay="false" action="http://www.infovalutar.ro/LastDateInserted" name="LastDateInserted" bindingOperationName="LastDateInserted" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="09a20ae2-74c7-4437-b8e5-86a1288e8387" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <inf:LastDateInserted/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/CursSoap/LastDateInsertedRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="ec4459f3-f23d-445a-a4f4-4a4e539e9b65" wsaVersion="NONE" name="CursSoap" type="wsdl" bindingName="{http://www.infovalutar.ro/}CursSoap" soapVersion="1_1" anonymous="optional" definition="http://www.infovalutar.ro/curs.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.infovalutar.ro/curs.asmx?wsdl"><con:part><con:url>http://www.infovalutar.ro/curs.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.infovalutar.ro/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.infovalutar.ro/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.infovalutar.ro/">
+      <s:element name="GetLatestValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Moneda" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLatestValueResult" type="s:double"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getlatestvalue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Moneda" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getlatestvalueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getlatestvalueResult" type="s:double"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getall">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dt" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getallResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getallResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getvalue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TheDate" type="s:dateTime"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Moneda" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getvalueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getvalueResult" type="s:double"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getvalueadv">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="thedate" type="s:dateTime"/>
+            <s:element minOccurs="0" maxOccurs="1" name="themoneda" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getvalueadvResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getvalueadvResult" type="tns:DateValue"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DateValue">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="value" type="s:double"/>
+          <s:element minOccurs="0" maxOccurs="1" name="moneda" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TheDate" type="s:dateTime"/>
+            <s:element minOccurs="0" maxOccurs="1" name="Moneda" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetValueResult" type="s:double"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LastDateInserted">
+        <s:complexType/>
+      </s:element>
+      <s:element name="LastDateInsertedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LastDateInsertedResult" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="lastdateinserted">
+        <s:complexType/>
+      </s:element>
+      <s:element name="lastdateinsertedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lastdateinsertedResult" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetLatestValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLatestValue"/>
+  </wsdl:message>
+  <wsdl:message name="GetLatestValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLatestValueResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getlatestvalueSoapIn">
+    <wsdl:part name="parameters" element="tns:getlatestvalue"/>
+  </wsdl:message>
+  <wsdl:message name="getlatestvalueSoapOut">
+    <wsdl:part name="parameters" element="tns:getlatestvalueResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getallSoapIn">
+    <wsdl:part name="parameters" element="tns:getall"/>
+  </wsdl:message>
+  <wsdl:message name="getallSoapOut">
+    <wsdl:part name="parameters" element="tns:getallResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getvalueSoapIn">
+    <wsdl:part name="parameters" element="tns:getvalue"/>
+  </wsdl:message>
+  <wsdl:message name="getvalueSoapOut">
+    <wsdl:part name="parameters" element="tns:getvalueResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getvalueadvSoapIn">
+    <wsdl:part name="parameters" element="tns:getvalueadv"/>
+  </wsdl:message>
+  <wsdl:message name="getvalueadvSoapOut">
+    <wsdl:part name="parameters" element="tns:getvalueadvResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetValue"/>
+  </wsdl:message>
+  <wsdl:message name="GetValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetValueResponse"/>
+  </wsdl:message>
+  <wsdl:message name="LastDateInsertedSoapIn">
+    <wsdl:part name="parameters" element="tns:LastDateInserted"/>
+  </wsdl:message>
+  <wsdl:message name="LastDateInsertedSoapOut">
+    <wsdl:part name="parameters" element="tns:LastDateInsertedResponse"/>
+  </wsdl:message>
+  <wsdl:message name="lastdateinsertedSoapIn">
+    <wsdl:part name="parameters" element="tns:lastdateinserted"/>
+  </wsdl:message>
+  <wsdl:message name="lastdateinsertedSoapOut">
+    <wsdl:part name="parameters" element="tns:lastdateinsertedResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="CursSoap">
+    <wsdl:operation name="GetLatestValue">
+      <wsdl:input message="tns:GetLatestValueSoapIn"/>
+      <wsdl:output message="tns:GetLatestValueSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="getlatestvalue">
+      <wsdl:input message="tns:getlatestvalueSoapIn"/>
+      <wsdl:output message="tns:getlatestvalueSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="getall">
+      <wsdl:input message="tns:getallSoapIn"/>
+      <wsdl:output message="tns:getallSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="getvalue">
+      <wsdl:input message="tns:getvalueSoapIn"/>
+      <wsdl:output message="tns:getvalueSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="getvalueadv">
+      <wsdl:input message="tns:getvalueadvSoapIn"/>
+      <wsdl:output message="tns:getvalueadvSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetValue">
+      <wsdl:input message="tns:GetValueSoapIn"/>
+      <wsdl:output message="tns:GetValueSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="LastDateInserted">
+      <wsdl:input message="tns:LastDateInsertedSoapIn"/>
+      <wsdl:output message="tns:LastDateInsertedSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="lastdateinserted">
+      <wsdl:input message="tns:lastdateinsertedSoapIn"/>
+      <wsdl:output message="tns:lastdateinsertedSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CursSoap" type="tns:CursSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetLatestValue">
+      <soap:operation soapAction="http://www.infovalutar.ro/GetLatestValue" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getlatestvalue">
+      <soap:operation soapAction="http://www.infovalutar.ro/getlatestvalue" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getall">
+      <soap:operation soapAction="http://www.infovalutar.ro/getall" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getvalue">
+      <soap:operation soapAction="http://www.infovalutar.ro/getvalue" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getvalueadv">
+      <soap:operation soapAction="http://www.infovalutar.ro/getvalueadv" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValue">
+      <soap:operation soapAction="http://www.infovalutar.ro/GetValue" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastDateInserted">
+      <soap:operation soapAction="http://www.infovalutar.ro/LastDateInserted" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lastdateinserted">
+      <soap:operation soapAction="http://www.infovalutar.ro/lastdateinserted" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CursSoap12" type="tns:CursSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetLatestValue">
+      <soap12:operation soapAction="http://www.infovalutar.ro/GetLatestValue" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getlatestvalue">
+      <soap12:operation soapAction="http://www.infovalutar.ro/getlatestvalue" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getall">
+      <soap12:operation soapAction="http://www.infovalutar.ro/getall" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getvalue">
+      <soap12:operation soapAction="http://www.infovalutar.ro/getvalue" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getvalueadv">
+      <soap12:operation soapAction="http://www.infovalutar.ro/getvalueadv" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValue">
+      <soap12:operation soapAction="http://www.infovalutar.ro/GetValue" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LastDateInserted">
+      <soap12:operation soapAction="http://www.infovalutar.ro/LastDateInserted" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lastdateinserted">
+      <soap12:operation soapAction="http://www.infovalutar.ro/lastdateinserted" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Curs">
+    <wsdl:port name="CursSoap" binding="tns:CursSoap">
+      <soap:address location="http://www.infovalutar.ro/curs.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="CursSoap12" binding="tns:CursSoap12">
+      <soap12:address location="http://www.infovalutar.ro/curs.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint></con:endpoints><con:operation id="be8b93b5-d67f-4d1b-b67d-207069e7f2c0" isOneWay="false" action="http://www.infovalutar.ro/getall" name="getall" bindingOperationName="getall" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e6b9ff13-ef98-4fe0-8011-d97a11cc93d6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inf:getall>\r
+         <inf:dt>?</inf:dt>\r
+      </inf:getall>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/getall"/></con:call></con:operation><con:operation id="6bb8d523-301b-4bbf-b7d2-0bbe79277dcc" isOneWay="false" action="http://www.infovalutar.ro/getlatestvalue" name="getlatestvalue" bindingOperationName="getlatestvalue" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1a38176d-aa3c-4485-89d8-558f97115b3d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inf:getlatestvalue>\r
+         <!--Optional:-->\r
+         <inf:Moneda>?</inf:Moneda>\r
+      </inf:getlatestvalue>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/getlatestvalue"/></con:call></con:operation><con:operation id="fb5e501f-32ab-48ee-a7db-df4e26c27fd1" isOneWay="false" action="http://www.infovalutar.ro/GetLatestValue" name="GetLatestValue" bindingOperationName="GetLatestValue" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="59541fb9-7efb-4139-9e34-49caa25e4898" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inf:GetLatestValue>\r
+         <!--Optional:-->\r
+         <inf:Moneda>?</inf:Moneda>\r
+      </inf:GetLatestValue>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/GetLatestValue"/></con:call></con:operation><con:operation id="d87e6777-dd02-4bf2-b8c0-0c4029293f70" isOneWay="false" action="http://www.infovalutar.ro/getvalue" name="getvalue" bindingOperationName="getvalue" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f05624e5-0ef4-4a5a-8fb4-c5ff77ffd57c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inf:getvalue>\r
+         <inf:TheDate>?</inf:TheDate>\r
+         <!--Optional:-->\r
+         <inf:Moneda>?</inf:Moneda>\r
+      </inf:getvalue>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/getvalue"/></con:call></con:operation><con:operation id="53afd12a-7eb7-4a3a-ad8c-553f01d3b564" isOneWay="false" action="http://www.infovalutar.ro/GetValue" name="GetValue" bindingOperationName="GetValue" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="76e2046a-c8cc-45f3-8fa3-0dee926971e2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inf:GetValue>\r
+         <inf:TheDate>?</inf:TheDate>\r
+         <!--Optional:-->\r
+         <inf:Moneda>?</inf:Moneda>\r
+      </inf:GetValue>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/GetValue"/></con:call></con:operation><con:operation id="7d08f307-1a60-421a-84a3-23a9a0fef5a5" isOneWay="false" action="http://www.infovalutar.ro/getvalueadv" name="getvalueadv" bindingOperationName="getvalueadv" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bbb60516-c4f8-451b-bae9-ba97d50f60d5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inf:getvalueadv>\r
+         <inf:thedate>?</inf:thedate>\r
+         <!--Optional:-->\r
+         <inf:themoneda>?</inf:themoneda>\r
+      </inf:getvalueadv>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/getvalueadv"/></con:call></con:operation><con:operation id="0d6ce94c-cb8a-47eb-b5ca-f98fb23324bb" isOneWay="false" action="http://www.infovalutar.ro/lastdateinserted" name="lastdateinserted" bindingOperationName="lastdateinserted" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a5f84704-fd65-4c4e-bb27-6af6430c13c8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inf:lastdateinserted/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/lastdateinserted"/></con:call></con:operation><con:operation id="de3acbbf-ca0c-43ab-afc9-def105c95c8b" isOneWay="false" action="http://www.infovalutar.ro/LastDateInserted" name="LastDateInserted" bindingOperationName="LastDateInserted" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8d8ea866-0406-4c94-bb52-ee63bbd5d7eb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.infovalutar.ro/curs.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:inf="http://www.infovalutar.ro/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <inf:LastDateInserted/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.infovalutar.ro/LastDateInserted"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ro.ucv.inf.soa.ws.phonebook</groupId>
+	<artifactId>jax-ws-phonebook</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>PhoneBook SOAP JAX-WS Service</name>
+	<description>PhoneBook SOAP Web service implemented using Java API for XML Web Services (JAX-WS)</description>
+
+	<organization>
+		<name>Department of Computer Science</name>
+		<url>http://inf.ucv.ro</url>
+	</organization>
+
+	<properties>
+		<!-- Generic properties -->
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- Servlet -->
+		<servletapi.version>3.1.0</servletapi.version>
+
+		<!-- Java API for XML Web Services (JAX-WS) -->
+		<jaxws-rt.version>2.3.0</jaxws-rt.version>
+
+		<!-- Maven plugins -->
+		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+		<jetty-maven-plugin.version>9.4.8.v20171121</jetty-maven-plugin.version>
+		<jetty.http.port>8080</jetty.http.port>
+	</properties>
+	<dependencies>
+		<!-- for compile only, your container should have this -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servletapi.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.ws</groupId>
+			<artifactId>jaxws-rt</artifactId>
+			<version>${jaxws-rt.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<plugins>
+			<!-- Set JDK Compiler Level -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+
+			<!-- Jetty Plugin to allow running application with mvn jetty:run -->
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${jetty-maven-plugin.version}</version>
+				<configuration>
+					<webApp>
+						<contextPath>/${project.artifactId}</contextPath>
+					</webApp>
+					<scanIntervalSeconds>2</scanIntervalSeconds>
+					<httpConnector>
+						<!--host>localhost</host -->
+						<port>${jetty.http.port}</port>
+					</httpConnector>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
