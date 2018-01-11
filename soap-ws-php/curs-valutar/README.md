@@ -162,7 +162,7 @@ if($moneda != ''){
 
 Running Example
 ---------------
-In this section is presented how to deploy the code in [XAMPP for Windows 7.2.0] (https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.2.0/xampp-win32-7.2.0-0-VC15.zip/download) which contains PHP 7.
+In this section is presented how to deploy the code in [XAMPP for Windows 7.2.0](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.2.0/xampp-win32-7.2.0-0-VC15.zip/download) which contains PHP 7.
 
 First, we must enable _PHP SOAP extension_ because this is not enabled by default. Open `xampp\php\php.ini` file, locate the following line:
 
