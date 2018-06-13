@@ -7,7 +7,7 @@ SOA Lab Exercises
 
 3) Write a Web Service client to gets conversion rate from one currency to another currency using _[Currency Convertor](http://www.webservicex.com/New/Home/ServiceDetail/10)_ web service.
 
-4) Write a Web Service (service/client) that converts distances between Millimetres, Centimetres, Inches, Meters, Kilometres, Miles.
+4) Write a Web Service (service/client) that converts distances between Millimetres, Centimetres, Inches, Meters, Kilometers, Miles.
 
 5) Implements a Web Service (service/client) that manage the product prices from a store.
 
