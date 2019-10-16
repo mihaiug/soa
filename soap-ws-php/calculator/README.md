@@ -17,7 +17,8 @@ In the following we describe how can be implemented a simple _Calculator_ web se
 
 The Web Service will accessible through SOAP protocol over HTTP. 
 
-###Building SOAP Server###
+
+### Building SOAP Server ###
 
 The service that handle the SOAP requests is presented in the following `server.php` file: 
 ```php
@@ -39,7 +40,7 @@ $server->handle();
 ?> 
 ```
 
-###Building SOAP Client###
+### Building SOAP Client ###
 The file `client.php` contains the client code:
 
 ```php
@@ -117,7 +118,7 @@ Save file and restart the _Apache Web Server_.
 
 Next, copy the `calculator` folder in `xampp\htdocs\calculator` 
 
-Now, in the Web Browser open http://localhost/calculator.
+Now, in the Web Browser open [http://localhost/calculator](http://localhost/calculator).
 
 
 
