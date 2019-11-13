@@ -11,6 +11,7 @@ public class CalculatorServicePublisher {
 	  String endPointURL = "http://localhost:9090/calculator";
 		CalculatorService service = new CalculatorServiceImpl();
 		System.out.println("Web Service started: " + endPointURL);
+		System.out.println("Use CTRL+C to stop.");
 		Endpoint.publish(endPointURL, service);
 	}
 
