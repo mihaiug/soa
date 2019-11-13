@@ -1,0 +1,13 @@
+*.class
+
+
+# Eclipse
+.settings/
+.prefs
+*.prefs
+.metadata/
+classes/
+
+# Mac
+.DS_Store
+
