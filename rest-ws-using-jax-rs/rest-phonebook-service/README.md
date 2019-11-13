@@ -20,20 +20,20 @@ Web Service Methods
 -------------------
 The methods implemented by the service are presented in the following table:
 
-Method |URI path                                        | Description                        | Expected Results
--------|----------------------------------------------- | ---------------------------------- | --------------------------------------------
-GET    |`_/rest-phonebook/api/contacts_`       | Gets list of all contacts          | List of contacts as JSON or XML
-GET    |`_/rest-phonebook/api/contacts/{id}_`| Gets contact with specified `id`  | Contact as JSON or XML
-POST   |`_/rest-phonebook/api/contacts_`      | Add a contact to phonebook          | Redirect to location where gets added contact
-PUT    |`_/rest-phonebook/api/contacts/{id}_`| Update contact with specified `id` | Nothing
-DELETE |`_/rest-phonebook/api/contacts/{id}_`| Delete contact with specified `id` | Nothing
+Method  |URI path                                        | Description                        | Expected Results
+--------|----------------------------------------------- | ---------------------------------- | --------------------------------------------
+`GET`   |_`/rest-phonebook/api/contacts`_       | Gets list of all contacts          | List of contacts as JSON or XML
+`GET`   |_`/rest-phonebook/api/contacts/{id}`_| Gets contact with specified `id`  | Contact as JSON or XML
+`POST`  |_`/rest-phonebook/api/contacts`_      | Add a contact to phonebook          | Redirect to location where gets added contact
+`PUT`   |_`/rest-phonebook/api/contacts/{id}`_| Update contact with specified `id` | Nothing
+`DELETE`|_`/rest-phonebook/api/contacts/{id}`_| Delete contact with specified `id` | Nothing
 
 
 ### API Methods Invoking
 
-####Add a contact####
+#### Add a contact
 ______________________
-
+##### JSON Syntax
 ```json
 POST /rest-phonebook/api/contacts
 Content-Type: application/json
@@ -47,7 +47,7 @@ RESPONSE: HTTP 201 (Created)
 Location header:http://localhost:8080/rest-phonebook/api/contacts/1
 ```
 
-OR
+##### XML Syntax
 
 ```xml
 POST /rest-phonebook/api/contacts
@@ -63,8 +63,9 @@ HTTP 201 (Created)
 Location header:http://localhost:8080/rest-phonebook/api/contacts/1
 ```
 
-###Get all contacts###
+#### Get all contacts
 ______________________
+##### JSON Syntax
 
 ```json
 GET /rest-phonebook/api/contacts
@@ -87,7 +88,7 @@ Content-Type: application/json
     }    
 ]
 ```
-
+##### XML Syntax
 ```xml
 GET /rest-phonebook/api/contacts
 Content-Type: application/xml
@@ -97,7 +98,7 @@ RESPONSE
 <contacts>
     <contact>
         <id>1</id>
-        <name>Misu</name>
+        <name>Mihai</name>
         <phone>07200000</phone>
     </contact>
     <contact>
@@ -108,8 +109,10 @@ RESPONSE
 </contacts>
 ```
 
-###Get a contact###
+#### Get a contact
 ______________________
+
+##### JSON Syntax
 
 ```json
 GET /rest-phonebook/api/contacts/1
@@ -125,7 +128,7 @@ Content-Type: application/json
     "phone": "07200000"
 }
 ```
-
+##### XML Syntax
 ```xml
 GET /rest-phonebook/api/contacts/1
 Content-Type: application/xml
@@ -134,13 +137,15 @@ RESPONSE
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contact>
     <id>1</id>
-    <name>Misu</name>
+    <name>Mihai</name>
     <phone>07200000</phone>
 </contact>
 ```
 
-###Update a contact###
+#### Update a contact
 ______________________
+
+##### JSON Syntax
 
 ```json
 POST /rest-phonebook/api/contacts/1
@@ -152,7 +157,7 @@ Content-Type: application/json
 }
 ```
 
-OR
+##### XML Syntax
 
 ```xml
 POST /rest-phonebook/api/contacts/1
@@ -164,7 +169,7 @@ Content-Type: application/xml
 </contact>
 ```
 
-###Delete a contact###
+#### Delete a contact
 ______________________
 
 ```json
@@ -197,7 +202,7 @@ Alternatively, you can run the application using Maven Jetty plugin:
 cd /d  d:\workspace\rest-phonebook-service
 mvn jetty:run
 ```
-This command launches _Maven Embeded Jetty_ web server and next, use any REST Client (e.g. Postman) to access your resources under the following URL: [http://localhost:8080/rest-phonebook/] (http://localhost:8000/rest-phonebook/)
+This command launches _Maven Embeded Jetty_ web server and next, use any REST Client (e.g. Postman) to access your resources under the following URL: [http://localhost:8080/rest-phonebook/](http://localhost:8000/rest-phonebook/)
 
 
 ### Using Spring Tool Suite
