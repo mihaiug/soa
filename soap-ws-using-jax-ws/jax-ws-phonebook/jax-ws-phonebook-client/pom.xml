@@ -16,7 +16,7 @@
 		<main.exec.classname>ro.ucv.inf.soa.ws.phonebook.PhoneBookClient</main.exec.classname>
 		
 		<!-- Java API for XML Web Services (JAX-WS) -->
-		<jaxws.version>2.3.0</jaxws.version>
+		<jaxws.version>2.3.2</jaxws.version>
 		
 		<!-- WSDL URL -->	
 		<wsdl.url>http://localhost:8080/jax-ws-phonebook/contacts?wsdl</wsdl.url>
@@ -25,12 +25,12 @@
 		<wsdl.directory>${basedir}/src/main/resources/wsdl</wsdl.directory>
 		<wsdl.file>contacts.wsdl</wsdl.file>
 		
-		<!-- Plug-in versions -->
+		<!-- Plug-in versions -->		
+		<!-- Plug-in used to generate Java source code based on WSDL -->
 		<jaxws-maven-plugin.version>2.5</jaxws-maven-plugin.version>
 		<build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
-		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-		<exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>	
-			
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>					
 	</properties>
 
 	<dependencies>

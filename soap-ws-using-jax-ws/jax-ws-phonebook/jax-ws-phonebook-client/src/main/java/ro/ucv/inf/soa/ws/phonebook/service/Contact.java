@@ -114,4 +114,9 @@ public class Contact {
         this.phone = value;
     }
 
+    @Override
+    public String toString() {
+      return "Contact (id=" + id + ", name=" + name + ", phone=" + phone + ")";
+    }
+
 }
