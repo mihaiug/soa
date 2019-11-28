@@ -28,7 +28,6 @@ public class Contact {
     this.id = id;
   }
 
- 
   public String getName() {
     return name;
   }
@@ -36,8 +35,6 @@ public class Contact {
   public void setName(String name) {
     this.name = name;
   }
-
-
 
   public String getPhone() {
     return phone;

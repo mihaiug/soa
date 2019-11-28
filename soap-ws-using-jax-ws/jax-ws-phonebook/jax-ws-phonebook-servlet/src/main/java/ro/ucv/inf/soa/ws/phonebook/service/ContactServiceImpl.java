@@ -50,7 +50,6 @@ public class ContactServiceImpl implements ContactService {
 
   @Override
   public void deleteContact(@WebParam(name="id") @XmlElement(required=true, nillable=false) Long id) throws RecordNotFoundException {
-
     contactRepository.delete(id);
   }
 
