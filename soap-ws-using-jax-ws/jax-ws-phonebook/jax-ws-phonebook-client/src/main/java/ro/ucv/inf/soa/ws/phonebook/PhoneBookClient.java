@@ -11,23 +11,30 @@ import ro.ucv.inf.soa.ws.phonebook.service.Contacts;
 
 public class PhoneBookClient {
   public static void main(String[] args) throws Exception {
-    
+
     URL wsdlLocation = new URL("http://localhost:8080/jax-ws-phonebook/contacts?wsdl");
     QName serviceName = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "contacts");
-    
+
     Contacts contacts = new Contacts(wsdlLocation, serviceName);
     ContactService contactService = contacts.getContactServiceImplPort();
-   
-    //Add a contact to PhoneBook
+
+    // Add a contact to PhoneBook
     Contact contact = new Contact();
     contact.setName("Mihai");
     contact.setPhone("1234");
     System.out.println("Add contact: " + contact);
     contactService.addContact(contact);
-    
-    //Gets all contacts.
+
+    // Gets all contacts.
     List<Contact> contactsList = contactService.getAllContacts();
+
+    System.out.println("Get all contacts: " + contactsList);
     
-    System.out.println("Get contacts: " +contactsList);
+    if (!contactsList.isEmpty()) {
+      Contact c = contactsList.get(0);
+      System.out.println("Remove contact with id: " + c.getId());
+      contactService.deleteContact(c.getId());
+      System.out.println("Get all contacts: " + contactService.getAllContacts());
+    }
   }
 }
