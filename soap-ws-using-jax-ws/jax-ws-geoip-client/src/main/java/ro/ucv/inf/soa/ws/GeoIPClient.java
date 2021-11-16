@@ -4,32 +4,35 @@ import java.net.URL;
 
 import javax.xml.namespace.QName;
 
-import ro.ucv.inf.soa.ws.geoip.GeoIP;
 import ro.ucv.inf.soa.ws.geoip.GeoIPService;
 import ro.ucv.inf.soa.ws.geoip.GeoIPServiceSoap;
 
 public class GeoIPClient {
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 
-		try {
+    try {
 
-			URL url = new URL("http://www.webservicex.net/geoipservice.asmx?WSDL");
+      URL url = new URL("http://wsgeoip.lavasoft.com/ipservice.asmx?WSDL");
 
-			QName qName = new QName("http://www.webservicex.net/", "GeoIPService");
+      QName qName = new QName("http://lavasoft.com/", "GeoIPService");
 
-			GeoIPService service = new GeoIPService(url, qName);
-			GeoIPServiceSoap geoIPServiceSoap = service.getGeoIPServiceSoap();
-			GeoIP geoIP = geoIPServiceSoap.getGeoIP("193.231.40.254");
-			System.out.println("IP:\t\t" + geoIP.getIP());
-			System.out.println("Country code: \t" + geoIP.getCountryCode());
-			System.out.println("Country name: \t" + geoIP.getCountryName());
-			geoIP = geoIPServiceSoap.getGeoIPContext();
-			System.out.println("IP:\t\t" + geoIP.getIP());
-			System.out.println("Country code: \t" + geoIP.getCountryCode());
-			System.out.println("Country name: \t" + geoIP.getCountryName());
+      GeoIPService service = new GeoIPService(url, qName);
+      GeoIPServiceSoap geoIPServiceSoap = service.getGeoIPServiceSoap();
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+      // Invoke 'getIpLocation()' remote service operation.
+      String ip = "193.231.40.254";
+      System.out.println("Obtain location for: " + ip);
+      String ipLocation = geoIPServiceSoap.getIpLocation(ip);
+      System.out.println(ipLocation);
+
+      // Invoke 'getCountryNameByISO2()' remote service operation.
+      String countryISO2 = "RO";
+      System.out.println("Obtain country full name for: " + countryISO2);
+      String countryName = geoIPServiceSoap.getCountryNameByISO2(countryISO2);
+      System.out.println(countryName);
+
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
 }

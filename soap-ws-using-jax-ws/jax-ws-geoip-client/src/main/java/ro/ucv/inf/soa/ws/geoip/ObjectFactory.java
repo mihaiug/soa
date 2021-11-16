@@ -24,7 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GeoIP_QNAME = new QName("http://www.webservicex.net/", "GeoIP");
+    private final static QName _String_QNAME = new QName("http://lavasoft.com/", "string");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: ro.ucv.inf.soa.ws.geoip
@@ -34,56 +34,96 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetGeoIP }
+     * Create an instance of {@link GetIpLocation }
      * 
      */
-    public GetGeoIP createGetGeoIP() {
-        return new GetGeoIP();
+    public GetIpLocation createGetIpLocation() {
+        return new GetIpLocation();
     }
 
     /**
-     * Create an instance of {@link GetGeoIPResponse }
+     * Create an instance of {@link GetIpLocationResponse }
      * 
      */
-    public GetGeoIPResponse createGetGeoIPResponse() {
-        return new GetGeoIPResponse();
+    public GetIpLocationResponse createGetIpLocationResponse() {
+        return new GetIpLocationResponse();
     }
 
     /**
-     * Create an instance of {@link GeoIP }
+     * Create an instance of {@link GetIpLocation20 }
      * 
      */
-    public GeoIP createGeoIP() {
-        return new GeoIP();
+    public GetIpLocation20 createGetIpLocation20() {
+        return new GetIpLocation20();
     }
 
     /**
-     * Create an instance of {@link GetGeoIPContext }
+     * Create an instance of {@link GetIpLocation20Response }
      * 
      */
-    public GetGeoIPContext createGetGeoIPContext() {
-        return new GetGeoIPContext();
+    public GetIpLocation20Response createGetIpLocation20Response() {
+        return new GetIpLocation20Response();
     }
 
     /**
-     * Create an instance of {@link GetGeoIPContextResponse }
+     * Create an instance of {@link GetLocation }
      * 
      */
-    public GetGeoIPContextResponse createGetGeoIPContextResponse() {
-        return new GetGeoIPContextResponse();
+    public GetLocation createGetLocation() {
+        return new GetLocation();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GeoIP }{@code >}
+     * Create an instance of {@link GetLocationResponse }
+     * 
+     */
+    public GetLocationResponse createGetLocationResponse() {
+        return new GetLocationResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetCountryISO2ByName }
+     * 
+     */
+    public GetCountryISO2ByName createGetCountryISO2ByName() {
+        return new GetCountryISO2ByName();
+    }
+
+    /**
+     * Create an instance of {@link GetCountryISO2ByNameResponse }
+     * 
+     */
+    public GetCountryISO2ByNameResponse createGetCountryISO2ByNameResponse() {
+        return new GetCountryISO2ByNameResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetCountryNameByISO2 }
+     * 
+     */
+    public GetCountryNameByISO2 createGetCountryNameByISO2() {
+        return new GetCountryNameByISO2();
+    }
+
+    /**
+     * Create an instance of {@link GetCountryNameByISO2Response }
+     * 
+     */
+    public GetCountryNameByISO2Response createGetCountryNameByISO2Response() {
+        return new GetCountryNameByISO2Response();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link GeoIP }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.webservicex.net/", name = "GeoIP")
-    public JAXBElement<GeoIP> createGeoIP(GeoIP value) {
-        return new JAXBElement<GeoIP>(_GeoIP_QNAME, GeoIP.class, null, value);
+    @XmlElementDecl(namespace = "http://lavasoft.com/", name = "string")
+    public JAXBElement<String> createString(String value) {
+        return new JAXBElement<String>(_String_QNAME, String.class, null, value);
     }
 
 }

@@ -1,2 +1,6 @@
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.webservicex.net/", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+/**
+ * <b>A web service which performs GetIpAddress Lookups.</b>
+ * 
+ */
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://lavasoft.com/", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package ro.ucv.inf.soa.ws.geoip;

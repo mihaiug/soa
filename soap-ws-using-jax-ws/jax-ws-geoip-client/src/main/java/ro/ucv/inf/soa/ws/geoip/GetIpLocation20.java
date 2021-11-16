@@ -3,7 +3,6 @@ package ro.ucv.inf.soa.ws.geoip;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -18,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="GetGeoIPContextResult" type="{http://www.webservicex.net/}GeoIP" minOccurs="0"/&gt;
+ *         &lt;element name="sIp" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -29,36 +28,35 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "getGeoIPContextResult"
+    "sIp"
 })
-@XmlRootElement(name = "GetGeoIPContextResponse")
-public class GetGeoIPContextResponse {
+@XmlRootElement(name = "GetIpLocation_2_0")
+public class GetIpLocation20 {
 
-    @XmlElement(name = "GetGeoIPContextResult")
-    protected GeoIP getGeoIPContextResult;
+    protected String sIp;
 
     /**
-     * Gets the value of the getGeoIPContextResult property.
+     * Gets the value of the sIp property.
      * 
      * @return
      *     possible object is
-     *     {@link GeoIP }
+     *     {@link String }
      *     
      */
-    public GeoIP getGetGeoIPContextResult() {
-        return getGeoIPContextResult;
+    public String getSIp() {
+        return sIp;
     }
 
     /**
-     * Sets the value of the getGeoIPContextResult property.
+     * Sets the value of the sIp property.
      * 
      * @param value
      *     allowed object is
-     *     {@link GeoIP }
+     *     {@link String }
      *     
      */
-    public void setGetGeoIPContextResult(GeoIP value) {
-        this.getGeoIPContextResult = value;
+    public void setSIp(String value) {
+        this.sIp = value;
     }
 
 }

@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="GetGeoIPResult" type="{http://www.webservicex.net/}GeoIP" minOccurs="0"/&gt;
+ *         &lt;element name="GetIpLocation_2_0Result" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -29,36 +29,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "getGeoIPResult"
+    "getIpLocation20Result"
 })
-@XmlRootElement(name = "GetGeoIPResponse")
-public class GetGeoIPResponse {
+@XmlRootElement(name = "GetIpLocation_2_0Response")
+public class GetIpLocation20Response {
 
-    @XmlElement(name = "GetGeoIPResult")
-    protected GeoIP getGeoIPResult;
+    @XmlElement(name = "GetIpLocation_2_0Result")
+    protected String getIpLocation20Result;
 
     /**
-     * Gets the value of the getGeoIPResult property.
+     * Gets the value of the getIpLocation20Result property.
      * 
      * @return
      *     possible object is
-     *     {@link GeoIP }
+     *     {@link String }
      *     
      */
-    public GeoIP getGetGeoIPResult() {
-        return getGeoIPResult;
+    public String getGetIpLocation20Result() {
+        return getIpLocation20Result;
     }
 
     /**
-     * Sets the value of the getGeoIPResult property.
+     * Sets the value of the getIpLocation20Result property.
      * 
      * @param value
      *     allowed object is
-     *     {@link GeoIP }
+     *     {@link String }
      *     
      */
-    public void setGetGeoIPResult(GeoIP value) {
-        this.getGeoIPResult = value;
+    public void setGetIpLocation20Result(String value) {
+        this.getIpLocation20Result = value;
     }
 
 }
