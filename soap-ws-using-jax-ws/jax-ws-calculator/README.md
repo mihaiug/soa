@@ -10,7 +10,7 @@ Requirements
 ------------
 In order to compile and run examples the following software are needed:
 
-* [JDK 1.8](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html)
+* [JDK 1.8](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)
 * [Spring Tool Suite](https://spring.io/tools)
 * [SoapUI](https://www.soapui.org)
 

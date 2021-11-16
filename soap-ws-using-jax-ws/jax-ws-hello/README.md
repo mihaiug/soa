@@ -10,7 +10,7 @@ Requirements
 ------------
 In order to compile and run this application the following software are needed:
 
-* [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [JDK 1.8](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)
 * [Apache Maven](https://maven.apache.org) 
 * [Apache Tomcat](https://tomcat.apache.org)
 * [Spring Tool Suite](https://spring.io/tools)
