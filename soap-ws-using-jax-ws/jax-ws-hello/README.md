@@ -28,11 +28,11 @@ To compile and run the project using STS you must perform the following steps:
 * Import the project:
 
   - `File -> Import ->  Existing Projects into Workspace`
-  - Select the folder where is located the `server` project (e.g. `d:\workspace\jax-ws-calculator\server`)
+  - Select the folder where is located the `server` project (e.g. `d:\workspace\jax-ws-hello\server`)
 * Run the project:
  
-  - From the `Package Explorer` view select the  `jax-ws-calculator-server` project, right click and select `Run As -> Java Application`
-  - For testing, you can access this URL : [http://localhost:9090/calculator?wsdl](http://localhost:9090/calculator?wsdl), if you see the WSDL, it means web services are deploy successfully.
+  - From the `Package Explorer` view select the  `jax-ws-hello-server` project, right click and select `Run As -> Java Application`
+  - For testing, you can access this URL : [http://localhost:8080/hello?wsdl](http://localhost:8080/hello?wsdl), if you see the WSDL, it means web services are deploy successfully.
 
 
 ### Run Client ###
@@ -41,7 +41,7 @@ To compile and run the project using STS you must perform the following steps:
 
 * Import the project:
   - `File -> Import ->  Existing Projects into Workspace`
-  - Select the folder where is located the `client` project (e.g. `d:\workspace\jax-ws-calculator\client`)
+  - Select the folder where is located the `client` project (e.g. `d:\workspace\jax-ws-hello\client`)
 
 * Run the project:
-  - From the `Package Explorer` view select the  `jax-ws-calculator-client` project, right click and select `Run As -> Java Application`
+  - From the `Package Explorer` view select the  `jax-ws-hello-client` project, right click and select `Run As -> Java Application`
