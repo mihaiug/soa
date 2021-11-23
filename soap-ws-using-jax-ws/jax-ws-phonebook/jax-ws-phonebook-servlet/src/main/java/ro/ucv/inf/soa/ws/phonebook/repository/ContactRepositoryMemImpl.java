@@ -25,14 +25,14 @@ public class ContactRepositoryMemImpl implements ContactRepository {
   /**
    * Find a contact with specified id.
    * 
-   * @param id  The contact Id.
-   * @return The contact with specified id or <code>null</code> if contact not
-   *         found.
+   * @param id The contact Id.
+   * @return The contact with specified id or <code>null</code> if contact not  found.
    */
+  @Override
   public Contact findOne(Long id) {
     Contact contact = null;
     for (Contact currentContact : contacts) {
-      if (currentContact.getId() == id) {
+      if (currentContact.getId().equals(id)) {
         contact = currentContact;
         break;
       }
@@ -46,6 +46,19 @@ public class ContactRepositoryMemImpl implements ContactRepository {
     Contact contact = null;
     for (Contact currentContact : contacts) {
       if (currentContact.getName().equalsIgnoreCase(name)) {
+        contact = currentContact;
+        break;
+      }
+    }
+
+    return contact;
+  }
+  
+  @Override
+  public Contact findByPhone(String phone) {
+    Contact contact = null;
+    for (Contact currentContact : contacts) {
+      if (currentContact.getPhone().equals(phone)) {
         contact = currentContact;
         break;
       }
@@ -97,4 +110,6 @@ public class ContactRepositoryMemImpl implements ContactRepository {
   private long getNextContactId() {
     return lastContactId.incrementAndGet();
   }
+
+
 }
