@@ -18,11 +18,15 @@
 		<servletapi.version>2.5</servletapi.version>
 		
     	<!-- Jersey JAX-RS API  -->
-        <jersey.version>2.26</jersey.version>
+        <jersey.version>2.28</jersey.version>
+        <!-- Jersey 2.28 is the last version of Jersey released from https://github.com/jersey/jersey before it is donated to Eclipse Foundation -->
         
     	<!-- Maven plugins -->
-		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-		<tomcat7-maven-plugin.version>2.2</tomcat7-maven-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<jetty-maven-plugin.version>9.4.44.v20210927</jetty-maven-plugin.version>
+		
+		<!-- Port for HTTP server  -->
+		<jetty.http.port>8080</jetty.http.port>
     </properties>
 
     <dependencyManagement>
@@ -44,11 +48,13 @@
             <artifactId>jersey-container-servlet-core</artifactId>
             <!-- use the following artifactId if you don't need servlet 2.x compatibility -->
             <!-- artifactId>jersey-container-servlet</artifactId -->
+            <!-- version is not required because of the BOM -->
         </dependency>
         
         <dependency>
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
+            <!-- version is not required because of the BOM -->
         </dependency>
         
         <!-- uncomment this to get JSON support
@@ -79,16 +85,23 @@
 				</configuration>
 			</plugin>
 			
-			<!-- Apache Tomcat Plugin to allow running application with mvn tomcat7:run -->
+			
+			<!-- Jetty Plugin to allow running application with mvn jetty:run -->
 			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>${tomcat7-maven-plugin.version}</version>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${jetty-maven-plugin.version}</version>
 				<configuration>
-					<path>/${project.artifactId}</path>
-					<port>8080</port>
+					<webApp>
+						<contextPath>/${project.artifactId}</contextPath>
+					</webApp>
+					<scanIntervalSeconds>2</scanIntervalSeconds>
+					<httpConnector>
+						<!--host>localhost</host -->
+						<port>${jetty.http.port}</port>
+					</httpConnector>
 				</configuration>
-			</plugin>	
+			</plugin>
 		</plugins>
 	</build>
 </project>

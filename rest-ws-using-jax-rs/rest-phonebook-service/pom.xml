@@ -20,12 +20,15 @@
 		<!-- Servlet -->
 		<servletapi.version>3.1.0</servletapi.version>
 
-		<!-- Jersey JAX-RS API -->
-		<jersey.version>2.29.1</jersey.version>
+		<!-- Jersey JAX-RS API  -->
+        <jersey.version>2.28</jersey.version>
+        <!-- Jersey 2.28 is the last version of Jersey released from https://github.com/jersey/jersey before it is donated to Eclipse Foundation -->
 
 		<!-- Maven plugins -->
-		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-		<jetty-maven-plugin.version>9.4.24.v20191120</jetty-maven-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<jetty-maven-plugin.version>9.4.44.v20210927</jetty-maven-plugin.version>
+		
+		<!-- Port for HTTP server  -->
 		<jetty.http.port>8080</jetty.http.port>
 	</properties>
 	<dependencyManagement>
