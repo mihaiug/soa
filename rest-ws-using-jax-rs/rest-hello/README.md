@@ -29,14 +29,14 @@ To compile and run the project using STS you must perform the following steps:
   - `File -> Import ->  Import Existing Maven Projects`
   - Select the folder where is located the `rest-hello-ws-service` project (e.g. `d:\workspace\rest-hello\rest-hello-ws-service`)
 * Run the project:
-  - From the `Package Explorer` view select the  `rest-hello-ws-service` project, right click and select `Run As -> Run on Server`
-  - For testing, you can access this URL :  http://localhost:8080/rest-hello]( http://localhost:8080/rest-hello).
+  - From the `Package Explorer` view select the `rest-hello-ws-service` project, right click and select `Run As -> Run on Server`
+  - For testing, you can access this URL:  [http://localhost:8080/rest-hello](http://localhost:8080/rest-hello).
 
 Alternatively, if you use Apache Maven the following commands must executed:
 ``` bat
 cd /d  d:\workspace\rest-hello\rest-hello-ws-service
 mvn clean package
-mvn tomcat7:run
+mvn jetty:run
 ```
 
 ### Run Client ###
