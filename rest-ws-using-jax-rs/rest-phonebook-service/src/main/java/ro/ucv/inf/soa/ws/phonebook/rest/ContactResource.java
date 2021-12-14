@@ -27,7 +27,7 @@ import ro.ucv.inf.soa.ws.phonebook.repository.ContactRepositoryMemImpl;
 @Singleton // Needed to create only one instance. By default a new resource class instance is created for each request to that resource. 
 public class ContactResource {
 
-   private ContactRepository contactRepository;
+  private ContactRepository contactRepository;
 
   public ContactResource() {
     contactRepository = new ContactRepositoryMemImpl();
@@ -77,6 +77,5 @@ public class ContactResource {
   public void deleteContact(@PathParam("id")Long id) throws RecordNotFoundException {
     contactRepository.delete(id);
   }
-
 
 }

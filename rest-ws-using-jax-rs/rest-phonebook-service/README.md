@@ -9,7 +9,7 @@ Requirements
 ------------
 In order to compile, run and test this application the following software are needed:
 
-* [JDK 1.8](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html)
+* [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Apache Maven](https://maven.apache.org) 
 * [Apache Tomcat](https://tomcat.apache.org)
 * [Spring Tool Suite](https://spring.io/tools)
@@ -18,7 +18,7 @@ In order to compile, run and test this application the following software are ne
 
 Web Service Methods
 -------------------
-The methods implemented by the service are presented in the following table:
+The methods implemented by the REST service are presented in the following table:
 
 Method  |URI path                                        | Description                        | Expected Results
 --------|----------------------------------------------- | ---------------------------------- | --------------------------------------------
@@ -40,7 +40,7 @@ Content-Type: application/json
 
 {
 "name" : "Mihai",
-"phone" : "07000000"
+"phone" : "07200000"
 }
 
 RESPONSE: HTTP 201 (Created)

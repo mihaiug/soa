@@ -1,13 +1,9 @@
 package ro.ucv.inf.soa.ws.phonebook.model;
 
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
-//@XmlType
-//@XmlAccessorType(XmlAccessType.FIELD)
+
 @XmlRootElement       //only needed if we also want to generate XML
 public class Contact {
 
@@ -15,7 +11,7 @@ public class Contact {
   
   @Size(min = 1, max = 30, message = "The length of name should be between 1 to 30")
   private String name;
-  @Size(min = 1, max = 30, message = "The length of phone should be between 1 to 10")
+  @Size(min = 1, max = 10, message = "The length of phone should be between 1 to 10")
   private String phone;
 
   public Contact() {
