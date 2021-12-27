@@ -53,7 +53,6 @@ public class ContactResource {
 
   @POST
   @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-  @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
   public Response addContact(@Valid Contact contact, @Context UriInfo uriInfo) {
     System.out.println("Add contact " + contact);
     contact.setId(null);
@@ -65,16 +64,15 @@ public class ContactResource {
 
   @PUT
   @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-  @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
   @Path("/{id}")
-  public void updateContact(@PathParam("id") Long id, Contact contact) throws RecordNotFoundException {
+  public void updateContact(@PathParam("id") Long id, @Valid Contact contact) throws RecordNotFoundException {
     contact.setId(id);
     contactRepository.save(contact);
   }
 
   @DELETE
   @Path("/{id}")
-  public void deleteContact(@PathParam("id")Long id) throws RecordNotFoundException {
+  public void deleteContact(@PathParam("id") Long id) throws RecordNotFoundException {
     contactRepository.delete(id);
   }
 

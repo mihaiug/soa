@@ -1,5 +1,6 @@
 package ro.ucv.inf.soa.ws.phonebook.model;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -9,8 +10,11 @@ public class Contact {
 
   private Long id;
   
+  @NotNull
   @Size(min = 1, max = 30, message = "The length of name should be between 1 to 30")
   private String name;
+  
+  @NotNull
   @Size(min = 1, max = 10, message = "The length of phone should be between 1 to 10")
   private String phone;
 
