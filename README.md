@@ -21,4 +21,4 @@ Examples
 
 Exercises
 -----------------
-1. [List of exercises](Exercices.md)
+1. [List of exercises](Exercises.md)
