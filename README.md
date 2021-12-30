@@ -17,6 +17,7 @@ Examples
 1. [Implementing SOAP Web Services using PHP](soap-ws-php)
 2. [Implementing SOAP Web Services using JAX-WS Java API](soap-ws-using-jax-ws)
 3. [Implementing RESTful Web Services using JAX-RS Java API](rest-ws-using-jax-rs)
+4. [Implementing RESTful Web Services using Java Spring Framework](rest-ws-using-spring)
 
 Exercises
 -----------------
