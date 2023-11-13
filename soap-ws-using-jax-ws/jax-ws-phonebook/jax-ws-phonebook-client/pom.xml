@@ -27,7 +27,7 @@
 		
 		<!-- Plug-in versions -->		
 		<!-- Plug-in used to generate Java source code based on WSDL -->
-		<jaxws-maven-plugin.version>2.5</jaxws-maven-plugin.version>
+		<jaxws-maven-plugin.version>2.6</jaxws-maven-plugin.version>
 		<build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 		<exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>					
@@ -44,10 +44,9 @@
 		 <dependency>
             <groupId>com.sun.xml.ws</groupId>
             <artifactId>jaxws-rt</artifactId>
-            <version>${jaxws.version}</version>
-            <scope>provided</scope>
+            <version>${jaxws.version}</version>          
         </dependency>
-         
+       
 	</dependencies>
 	<build>
 		<plugins>
