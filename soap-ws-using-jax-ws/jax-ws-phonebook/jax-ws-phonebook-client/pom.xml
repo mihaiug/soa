@@ -16,7 +16,7 @@
 		<main.exec.classname>ro.ucv.inf.soa.ws.phonebook.PhoneBookClient</main.exec.classname>
 		
 		<!-- Java API for XML Web Services (JAX-WS) -->
-		<jaxws.version>2.3.2</jaxws.version>
+		<jaxws.version>2.3.7</jaxws.version>
 		
 		<!-- WSDL URL -->	
 		<wsdl.url>http://localhost:8080/jax-ws-phonebook/contacts?wsdl</wsdl.url>

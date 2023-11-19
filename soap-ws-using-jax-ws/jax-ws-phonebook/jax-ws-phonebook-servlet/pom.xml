@@ -23,11 +23,11 @@
 		<servletapi.version>3.1.0</servletapi.version>
 
 		<!-- Java API for XML Web Services (JAX-WS) -->
-		<jaxws-rt.version>2.3.2</jaxws-rt.version>
+		<jaxws-rt.version>2.3.7</jaxws-rt.version>
 
 		<!-- Maven plugins -->
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-		<jetty-maven-plugin.version>9.4.24.v20191120</jetty-maven-plugin.version>
+		<jetty-maven-plugin.version>9.4.53.v20231009</jetty-maven-plugin.version>
 		<jetty.http.port>8080</jetty.http.port>
 	</properties>
 	<dependencies>
