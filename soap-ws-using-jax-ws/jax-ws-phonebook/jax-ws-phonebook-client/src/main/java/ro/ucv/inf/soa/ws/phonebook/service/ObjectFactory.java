@@ -24,16 +24,16 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _AddContact_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "addContact");
-    private final static QName _AddContactResponse_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "addContactResponse");
-    private final static QName _DeleteContact_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "deleteContact");
-    private final static QName _DeleteContactResponse_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "deleteContactResponse");
-    private final static QName _GetAllContacts_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "getAllContacts");
-    private final static QName _GetAllContactsResponse_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "getAllContactsResponse");
-    private final static QName _GetContactById_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "getContactById");
-    private final static QName _GetContactByIdResponse_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "getContactByIdResponse");
-    private final static QName _UpdateContact_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "updateContact");
-    private final static QName _UpdateContactResponse_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "updateContactResponse");
+    private static final QName _AddContact_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "addContact");
+    private static final QName _AddContactResponse_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "addContactResponse");
+    private static final QName _DeleteContact_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "deleteContact");
+    private static final QName _DeleteContactResponse_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "deleteContactResponse");
+    private static final QName _GetAllContacts_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "getAllContacts");
+    private static final QName _GetAllContactsResponse_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "getAllContactsResponse");
+    private static final QName _GetContactById_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "getContactById");
+    private static final QName _GetContactByIdResponse_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "getContactByIdResponse");
+    private static final QName _UpdateContact_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "updateContact");
+    private static final QName _UpdateContactResponse_QNAME = new QName("http://service.phonebook.ws.soa.inf.ucv.ro/", "updateContactResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: ro.ucv.inf.soa.ws.phonebook.service

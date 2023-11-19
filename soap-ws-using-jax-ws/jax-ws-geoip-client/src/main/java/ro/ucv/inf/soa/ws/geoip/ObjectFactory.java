@@ -24,7 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _String_QNAME = new QName("http://lavasoft.com/", "string");
+    private static final QName _String_QNAME = new QName("http://lavasoft.com/", "string");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: ro.ucv.inf.soa.ws.geoip

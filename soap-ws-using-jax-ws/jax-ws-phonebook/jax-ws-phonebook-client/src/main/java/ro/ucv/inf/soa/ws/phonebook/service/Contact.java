@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for contact complex type.
+ * <p>Java class for contact complex type</p>.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>The following schema fragment specifies the expected content contained within this class.</p>
  * 
  * <pre>
  * &lt;complexType name="contact"&gt;
@@ -112,11 +112,6 @@ public class Contact {
      */
     public void setPhone(String value) {
         this.phone = value;
-    }
-
-    @Override
-    public String toString() {
-      return "Contact (id=" + id + ", name=" + name + ", phone=" + phone + ")";
     }
 
 }
